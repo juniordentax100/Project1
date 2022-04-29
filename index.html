@@ -12,38 +12,54 @@
   <title>Woofer</title>
 </head>
 <body>
-    <main class="container card mt-5 pt-5">
+    <main class="container card mt-5 pt-5 pb-3">
       <div class="title">
         <h1>Woofer</h1>
-        <h4>Welcome to Woofer! We believe everyone can find the doggo to fit their lifestyle</h4>
+        <h4>This section will display 1 result (1 dog pic) based on the traits user selected</h4><br>
+        <h4>The user will then be able to like or dislike the pic which will bring up the next result.</h4><br>
+        <h4>Liked or disliked results can be saved in localStorage to meet project criteria. Maybe that can be dsiplayed at the bottom</h4><br>
+        <h4>Obviously design and color schemes can be discussed and changed accoridingly.</h4>
       </div>
-      <div>
-        <h4>Please choose these traits you would like for your pet</h4>
-        <!--expample traits that user can choose from. final traits will be dependent on what's available in the API-->
-        <form>
-        <ul>
-          <li>
-            <input type="radio" name="male">Male</input>
-          </li>
-          <li>
-            <input type="radio" value="female">Female</input>
-          </li>
-          <li>
-            <input type="radio" value="active">Active</input>
-          </li>
-          <li>
-            <input type="radio" value="mellow">Mellow</input>
-          </li>
-          <li>
-            <input type="radio" value="big">Big</input>
-          </li>
-          <li>
-            <input type="radio" value="small">Small</input>
-          </li>
-        </ul>
-        <input type="button" value="submit"></input>
-      </form>
-      </div>
+      
+
+
+<!--Modal on load-->
+      <div id="myModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Welcome to Woofer!</h5>
+                </div>
+                <div class="modal-body">
+            <h5>We believe everyone can find the doggo to fit their lifestyle. Please choose these traits you would like for your pet</h5>
+                    <form>
+                      <!--expample traits that user can choose from. final traits will be dependent on what's available in the API-->
+                      <ul>
+                        <li>
+                          <input type="radio" name="male">Male</input>
+                        </li>
+                        <li>
+                          <input type="radio" value="female">Female</input>
+                        </li>
+                        <li>
+                          <input type="radio" value="active">Active</input>
+                        </li>
+                        <li>
+                          <input type="radio" value="mellow">Mellow</input>
+                        </li>
+                        <li>
+                          <input type="radio" value="big">Big</input>
+                        </li>
+                        <li>
+                          <input type="radio" value="small">Small</input>
+                        </li>
+                      </ul>
+                      <input type="button" value="submit"></input>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
