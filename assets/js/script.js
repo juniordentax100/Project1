@@ -1,11 +1,17 @@
 $(document).ready(function(){
     $("#myModal").modal('show');
-})
+    $(".sub").click(function(event){
+      event.preventDefault();
+      $("#myModal").modal('hide');
+});
+});
 
 var likeBtn = document.getElementById("yes");
+var userInput = document.querySelector("#submit");
 console.log(likeBtn);
+console.log(userInput);
 
-function getApi() {
+function getDog() {
     // get pic of random dog
     var requestUrl = 'https://random.dog/woof.json';
     console.log(requestUrl);
@@ -34,7 +40,14 @@ function getApi() {
 
 
         
+userInput.addEventListener('click', function(){
+  var dog = document.getElementById("dog").checked;
+  var cat = document.getElementById("cat").checked;
+  if(dog === true){
+    getDog();
+  }
+  
+});
 
-
-
-    likeBtn.addEventListener('click', getApi);
+likeBtn.addEventListener('click', getDog);
+  
