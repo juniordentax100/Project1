@@ -1,10 +1,30 @@
 .title{
     text-align: center;
+    font-family: "bangers", san-serif;
+}
+.title h1{
+    font-size: 100px;
+    color: #E93C16;
 }
 ul{
     list-style: none;
 }
 .container{
-    background-color: #085A66;
+    background-color: #FBDCB5;
     border-radius: 10px;
+}
+.image img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border-radius: 10px;
+    border: 2px solid #E93C16;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.buttonDiv{
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 20px;
 }

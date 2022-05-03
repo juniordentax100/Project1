@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css">
@@ -13,28 +14,29 @@
 </head>
 <body>
   <!--start of main container-->
-    <main class="container col-8 d-flex flex-column">
-      <div class="m-5 row justify-content-around">
+    <main class="container col-6 d-flex flex-column">
+      <div class="m-3 row justify-content-around">
         <div classs="col-6 mb-3">
           <div class="title">
             <h1>Woofer</h1>
           </div>
           <!--main content goes in this div-->
           <div>
-            <!--left button-->
-            <div class="btn-group col-1" role="group" aria-label="Basic mixed styles example">
-              <button type="button" class="btn btn-danger">No</button>
+            <div class="buttonDiv">
+              <!--left button-->
+              <div class="btn-group col-1" role="group" aria-label="Basic mixed styles example">
+                <button type="button" class="btn btn-danger">No</button>
+              </div>
+              <!--right button-->
+              <div class="col-1 btn-group" role="group" aria-label="Basic mixed styles example">
+                <button type="button" class="btn btn-success" id="yes">Yes</button>
             </div>
+          </div>
             <!--image goes here-->
-            <div class="image col-3">
-              <p>image will go here</p>
-
+            <div class="image">
             </div>
 
-            <!--right button-->
-            <div class="col-1 btn-group" role="group" aria-label="Basic mixed styles example">
-              <button type="button" class="btn btn-success" id="yes">Yes</button>
-            </div>
+
             <h4>1 result (1 dog pic) based on user input will be here. user can like or dislike to see next result. </h4><br>
             <h4>Obviously design and functionality can be changed when discussed</h4>
           </div>
@@ -54,31 +56,19 @@
                     <h3 class="modal-title">Welcome to Woofer!</h3>
                 </div>
                 <div class="modal-body">
-                    <h5>We believe everyone can find the doggo to fit their lifestyle.</h5><br>
-                    <h5>Please choose these traits you would like for your pet:</h5>
+                    <h5>We believe the perfect pet exists for everybody!</h5><br>
+                    <h5>Please choose the type of pet you are interested in:</h5>
                     <form>
                         <!--example traits that user can choose from. final traits will be dependent on what's available in the API-->
                         <ul>
                             <li>
-                              <input type="radio" name="male">Male</input>
+                              <input type="radio" name="dog">Dog</input>
                             </li>
                             <li>
-                              <input type="radio" value="female">Female</input>
+                              <input type="radio" value="cat">Cat</input>
                             </li>
-                            <li>
-                              <input type="radio" value="active">Active</input>
-                            </li>
-                            <li>
-                              <input type="radio" value="mellow">Mellow</input>
-                            </li>
-                            <li>
-                              <input type="radio" value="big">Big</input>
-                            </li>
-                            <li>
-                              <input type="radio" value="small">Small</input>
-                            </li>
-                          </ul>
-                          <input type="button" value="submit"></input>
+                        </ul>
+                            <input type="button" value="submit"></input>
                     </form>
                 </div>
             </div>

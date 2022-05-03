@@ -15,15 +15,16 @@ function getApi() {
         return response.json();
     })
     .then(function(data){
-        console.log(data);
+        //console.log(data);
           var imageDiv = document.querySelector(".image");
           var image = document.createElement("img");
           image.setAttribute("src", data.url);
-          console.log(image);
           imageDiv.appendChild(image);
 
-        
     });
+
+
+        
 
 
     };
