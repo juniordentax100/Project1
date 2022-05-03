@@ -21,7 +21,7 @@ function getDog() {
         return response.json();
     })
     .then(function(data){
-        //console.log(data);
+        console.log(data);
           var imageDiv = document.querySelector(".image");
           var image = document.createElement("img");
           image.setAttribute("src", data.url);
@@ -33,6 +33,33 @@ function getDog() {
         deleteImg();
   };
 
+  function getCat() {
+    // get pic of random cat
+    var requestUrl = 'https://cataas.com/cat?json=true';
+    //console.log(requestCat);
+  
+    fetch(requestUrl)
+      .then(function(response) {
+        return response.json();
+    })
+    .then(function(data){
+        console.log(data);
+          var imageDiv = document.querySelector(".image");
+          var image = document.createElement("img");
+          image.setAttribute("src", "https://cataas.com/" + data.url);
+          image.setAttribute("id", "pic")
+          imageDiv.appendChild(image);
+
+          
+        });
+        deleteImg();
+  };
+
+
+
+
+
+
   var deleteImg = function(){
     var previousImg = document.getElementById("pic");
     previousImg.remove();
@@ -40,14 +67,14 @@ function getDog() {
 
 
         
-userInput.addEventListener('click', function(){
-  var dog = document.getElementById("dog").checked;
-  var cat = document.getElementById("cat").checked;
-  if(dog === true){
-    getDog();
-  }
+// userInput.addEventListener('click', function(){
+//   var dog = document.getElementById("dog").checked;
+//   var cat = document.getElementById("cat").checked;
+//   if(dog === true){
+//     getDog();
+//   }
   
-});
+// });
 
-likeBtn.addEventListener('click', getDog);
+likeBtn.addEventListener('click', getCat);
   
