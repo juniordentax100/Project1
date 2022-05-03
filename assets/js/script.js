@@ -19,14 +19,22 @@ function getApi() {
           var imageDiv = document.querySelector(".image");
           var image = document.createElement("img");
           image.setAttribute("src", data.url);
+          image.setAttribute("id", "pic")
           imageDiv.appendChild(image);
 
-    });
+          
+        });
+        deleteImg();
+  };
+
+  var deleteImg = function(){
+    var previousImg = document.getElementById("pic");
+    previousImg.remove();
+  }
 
 
         
 
 
-    };
 
     likeBtn.addEventListener('click', getApi);
