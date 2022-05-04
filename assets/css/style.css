@@ -65,4 +65,7 @@ ul{
 footer{
     display: flex;
     justify-content: center;
+    font-size: small;
+    line-height: 2px;
+    padding: 20px;
 }
