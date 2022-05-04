@@ -1,10 +1,29 @@
 $(document).ready(function(){
     $("#myModal").modal('show');
-    $(".sub").click(function(event){
-      event.preventDefault();
-      $("#myModal").modal('hide');
 });
-});
+
+var form = document.getElementById('animalForm');
+
+var closeModal = () => $("#myModal").modal('hide');
+
+animalForm.addEventListener('submit', function(event) {
+  event.preventDefault()
+  var pickedAnimal = document.querySelector("#animalForm ul li input[type=radio]:checked").value
+  showAnimal()
+  closeModal()
+  localStorage.setItem('pickedAnimal', pickedAnimal)
+})
+
+function showAnimal() {
+  var animal = localStorage.getItem('pickedAnimal');
+
+  if(animal === "Cat") {
+    getCat();
+  } else {
+    getDog();
+  }
+}
+
 
 var likeBtn = document.getElementById("yes");
 var userInput = document.querySelector("#submit");
@@ -23,6 +42,7 @@ function getDog() {
     .then(function(data){
         console.log(data);
           var imageDiv = document.querySelector(".image");
+          imageDiv.innerHTML = ""
           var image = document.createElement("img");
           image.setAttribute("src", data.url);
           image.setAttribute("id", "pic")
@@ -30,7 +50,7 @@ function getDog() {
 
           
         });
-        deleteImg();
+       
   };
 
   function getCat() {
@@ -45,6 +65,8 @@ function getDog() {
     .then(function(data){
         console.log(data);
           var imageDiv = document.querySelector(".image");
+          imageDiv.innerHTML = ""
+
           var image = document.createElement("img");
           image.setAttribute("src", "https://cataas.com/" + data.url);
           image.setAttribute("id", "pic")
@@ -52,7 +74,7 @@ function getDog() {
 
           
         });
-        deleteImg();
+        
   };
 
 
@@ -65,7 +87,7 @@ function getDog() {
     previousImg.remove();
   }
 
-
+var noBtn = document.getElementById("no");
         
 // userInput.addEventListener('click', function(){
 //   var dog = document.getElementById("dog").checked;
@@ -76,5 +98,5 @@ function getDog() {
   
 // });
 
-likeBtn.addEventListener('click', getCat);
-  
+likeBtn.addEventListener('click', showAnimal);
+  noBtn.addEventListener('click',showAnimal);
