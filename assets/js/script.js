@@ -17,7 +17,7 @@ animalForm.addEventListener('submit', function(event) {
 function showAnimal() {
   var animal = localStorage.getItem('pickedAnimal');
 
-  if(animal === "Cat") {
+  if(animal != "Cat") {
     getCat();
   } else {
     getDog();
