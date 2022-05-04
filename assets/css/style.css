@@ -19,7 +19,7 @@ ul{
     margin-right: auto;
     width: 50%;
     border-radius: 10px;
-    border: 2px solid #E93C16;
+    border: 2px solid #FCBA20;
     margin-top: 5px;
     margin-bottom: 5px;
 }
@@ -27,4 +27,19 @@ ul{
     text-align: center;
     padding-bottom: 10px;
     padding-top: 20px;
+}
+.modal-title{
+    font-family: "bangers", san-serif;
+    color: #E93C16;
+    
+}
+.modal-body{
+    background-color: #FBDCB5;
+}
+.modal-header{
+    background-color: #FCBA20;
+}
+.sub{
+    background-color: #FCBA20;
+    color: #E93C16;
 }
