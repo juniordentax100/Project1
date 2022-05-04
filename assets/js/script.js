@@ -15,20 +15,25 @@ animalForm.addEventListener('submit', function(event) {
 })
 
 function showAnimal() {
-  var animal = localStorage.getItem('pickedAnimal');
-
-  if(animal != "Cat") {
-    getCat();
-  } else {
+  var dog = document.getElementById("dog").checked;
+  var cat = document.getElementById("cat").checked;
+  //console.log(dog);
+  //console.log(cat);
+  if(dog === true){
     getDog();
   }
-}
+  else if(cat === true){
+    getCat();
+  }
+  // TO DO: **for future updates, allow users to submit multiple pet choices at the same time**
+};
 
 
 var likeBtn = document.getElementById("yes");
+var noBtn = document.getElementById("no");
 var userInput = document.querySelector("#submit");
-console.log(likeBtn);
-console.log(userInput);
+//console.log(likeBtn);
+//console.log(userInput);
 
 function getDog() {
     // get pic of random dog
@@ -56,7 +61,6 @@ function getDog() {
   function getCat() {
     // get pic of random cat
     var requestUrl = 'https://cataas.com/cat?json=true';
-    //console.log(requestCat);
   
     fetch(requestUrl)
       .then(function(response) {
@@ -77,26 +81,17 @@ function getDog() {
         
   };
 
-
-
-
-
-
   var deleteImg = function(){
     var previousImg = document.getElementById("pic");
     previousImg.remove();
   }
 
-var noBtn = document.getElementById("no");
-        
-// userInput.addEventListener('click', function(){
-//   var dog = document.getElementById("dog").checked;
-//   var cat = document.getElementById("cat").checked;
-//   if(dog === true){
-//     getDog();
-//   }
-  
-// });
 
-likeBtn.addEventListener('click', showAnimal);
+
+  likeBtn.addEventListener('click', showAnimal);
   noBtn.addEventListener('click',showAnimal);
+
+
+
+        
+
