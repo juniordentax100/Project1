@@ -62,3 +62,7 @@ ul{
     background-color: #FCBA20;
     color: #E93C16;
 }
+footer{
+    display: flex;
+    justify-content: center;
+}
