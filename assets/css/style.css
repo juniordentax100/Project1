@@ -8,7 +8,7 @@
     display: flex;
     align-items: center;
     font-size: 100px;
-     color: #E93C16;
+    color: #E93C16;
 }
 ul{
     list-style: none;
@@ -42,7 +42,6 @@ ul{
     margin-top: 5px;
     margin-bottom: 5px;
 }
-<<<<<<< HEAD
 .buttonDiv{
     text-align: center;
     padding-bottom: 10px;
@@ -63,5 +62,3 @@ ul{
     background-color: #FCBA20;
     color: #E93C16;
 }
-=======
->>>>>>> 62e720b845ec41e625364a2c9a5a04f736e0667d
