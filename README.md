@@ -26,7 +26,7 @@ A web browser and internet connection.
 * The use of advanced HTML, CSS and Javascript concepts to create a fully function application from scratch.
 * This project emphasizes the use of all technologies learned while applying said technologies within a group git workflow dynamic.
 
-![](assets/images/Screen-Shot.png)
+![](/assets/images/Screen-Shot.png)
 
 ### Technologies Used:<!--optional-->
 * HTML5
